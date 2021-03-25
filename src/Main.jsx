@@ -21,11 +21,11 @@ export default function Main() {
 
   useEffect(() => {
     filtering(data, filters, setFilteredData);
-  }, [data]);
+  }, [data, filters, setFilteredData]);
 
   useEffect(() => {
     filtering(data, filters, setFilteredData);
-  }, [filters]);
+  }, [filters, setFilteredData, data]);
   return (
     <>
       <Header />
