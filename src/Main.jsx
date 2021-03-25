@@ -17,7 +17,7 @@ export default function Main() {
 
   useEffect(() => {
     getData(setData, setIsFetching, setFilteredData);
-  }, []);
+  }, [setData, setIsFetching, setFilteredData]);
 
   useEffect(() => {
     filtering(data, filters, setFilteredData);
