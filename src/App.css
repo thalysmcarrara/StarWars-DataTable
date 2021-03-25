@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+:root {
+  --primary-color: #FBBF6B;
+  --secundary-color:#F6A400;
+  --tertiary-color: #63A09E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--tertiary-color);
+  font-family: 'Ranchers', cursive;
+  margin-top: 100px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-end;
+  text-align: center;
+  height: 70px;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 5px solid black;
+}
+
+.select {
+  background-color: var(--tertiary-color);
+  border: 3px solid var(--secundary-color);
+  border-radius: 7px;
+  padding: 5px 10px 5px 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('./assets/baseline_arrow_downward_black_18dp.png');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  margin-left: 3px;
+  margin-right: 3px;
+  min-width: 140px;
+  /* text-align-last:right; */
+  text-align-last: center;
+  cursor: pointer;
+  /* direction: rtl;  */
+}
+
+.select:focus,
+.select:hover {
+  outline: none;
+  border: 3px solid var(--primary-color);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0,0,0,0.5);
+  opacity: 1; /* Firefox */
+}
+
+input[type=text], input[type=number] {
+  background-color: var(--tertiary-color);
+  border: 3px solid var(--secundary-color);
+  border-radius: 7px;
+  padding: 5px 5px ;
+  width: 200px;
+  text-align-last: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+input[type=text]:focus,
+input[type=text]:hover,
+input[type=number]:focus,
+input[type=number]:hover {
+  border: 3px solid var(--primary-color);
+}
+
+.icons-container {
+  margin-left: 5rem;
+}
+
+.title-container {
+  margin-left: 37rem;
+}
+
+.darth {
+  position: absolute;
+  left: -18rem;
+  top: 2rem;
+}
+
+.bb8 {
+  position: absolute;
+  right: -15rem;
+  bottom: 0;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: var(--secundary-color);
+  border-radius: 2rem;
+  width: 50vw;
+  height: 20rem;
+  padding: 5px;
+  margin: 30px auto 0px auto;
+  position: relative;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 90%;
+  border: 3px solid var(--tertiary-color);
+  border-radius: 15px;
+  margin: auto;
+  margin-left: 20px;
+}
+.filter-column-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+
+.sort-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+}
+
+.sort-select {
+  display: flex;
+}
+
+.radio-sort {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+}
+
+.radio-button {
+  display: block;
+}
+
+.button-sort {
+  background-color: var(--secundary-color);
+  border: 3px solid var(--tertiary-color);
+  border-radius: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 40px;
+  margin-bottom: 7px;
+}
+
+.button-sort:hover {
+  background-color: var(--tertiary-color);
+  transition: 300ms;
+}
+
+.container-list-item {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--tertiary-color);
+  border-radius: 15px;
+  height: 90%;
+  margin: 20px;
+  background-color: var(--primary-color);
+  align-items: center;
+}
+.container-list-item h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container-list-filters {
+  margin: auto;
+  width: 165px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-filter-container {
+  height: 24px;
+}
+
+.container-deleted-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+}
+
+.button-delete-filter {
+  background-color: var(--primary-color);
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  margin-left: 20px;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 7px;
+  background-image: url('./assets/delete-24px.svg');
+  background-repeat: no-repeat;
+  /* background-image: url('./assets/delete-24px.svg'); */
+}
+
+hr {
+  margin: 0;
+  height: 2px;
+  width: 165px;
+  border-width: 0px;
+  color: var(--tertiary-color);
+  background-color: var(--tertiary-color);
+}
+
+.hr-large {
+  margin: 0;
+  height: 2px;
+  width: 700px;
+  border-width: 0px;
+  color: var(--tertiary-color);
+  background-color: var(--tertiary-color);
+}
+
+.table-container {
+  text-align: center;
+}
+table {
+  margin: 30px auto 0px;
+  width: 90vw;
+  border-radius: 1rem;
+  border-collapse: collapse;
+}
+
+tr {
+  background-color: var(--primary-color);
+}
+
+
+thead tr {
+  border-bottom: 30px solid var(--tertiary-color);
+}
+
+tbody tr {
+  border-bottom: 10px solid var(--tertiary-color);
+}
+
+th {
+  padding: 3rem 1rem;
+  border-radius: 3px;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 0.7rem 1rem;
+  text-align: center;
+  max-width: 150px;
+  overflow: auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* input radio */
+
+.radio-button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.my-radio-button {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 50%;
+  margin-right: 5px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.my-radio-button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+input[type="radio"]:checked + .my-radio-button::after {
+  transform: scale(1);
+}
+
+footer {
+  margin: 30px auto;
+  text-align: center;
+  height: 100px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+footer p {
+  font-size: 24px;
+  margin: 0px auto;
+}
+
+.social-medias {
+  position: absolute;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  right: 0px
+}
+
+footer img {
+  display: block;
+}
